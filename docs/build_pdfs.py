@@ -126,8 +126,16 @@ def build_quickstart():
         "<b>From URL</b> — a link to a hosted OpenAPI/Swagger spec.",
     ]))
     s.append(figure("02-import.svg"))
-    s.append(p("Try it with the samples in the <b>Example Swagger Files</b> folder, then verify the "
-               "result under <b>Resources → Imported APIs</b>."))
+    s.append(p("Try it with the samples in the <b>Example Swagger Files</b> folder, or pick "
+               "<b>From URL</b> and paste one of these live, free specs (no API key needed):"))
+    s.append(styled_table(
+        [["Public API", "Spec URL (Import from URL)"],
+         ["Swagger PetStore (OpenAPI 3.0)", "https://petstore3.swagger.io/api/v3/openapi.json"],
+         ["Swagger PetStore (Swagger 2.0)", "https://petstore.swagger.io/v2/swagger.json"],
+         ["APIs.guru Directory (OpenAPI 3.0)", "https://api.apis.guru/v2/specs/apis.guru/2.2.0/openapi.json"]],
+        [58 * mm, 112 * mm]))
+    s.append(Spacer(1, 4))
+    s.append(p("Then verify the result under <b>Resources → Imported APIs</b>."))
 
     s.append(h("4. Review your libraries (Resources)"))
     s.append(bullets([

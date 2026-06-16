@@ -72,7 +72,16 @@ The format is detected automatically. You'll be prompted to pick (or name) the
 library.
 
 Try it with the samples in [`Example Swagger Files`](Example%20Swagger%20Files) —
-e.g. the PetStore OpenAPI spec or the Postman collections included there.
+e.g. `petstore-openapi.json` or the Postman collections included there.
+
+**Or import straight from a public URL.** Pick **From URL** and paste one of these
+live, free specs (no API key needed):
+
+| API | Spec URL |
+|-----|----------|
+| Swagger PetStore (OpenAPI 3.0) | `https://petstore3.swagger.io/api/v3/openapi.json` |
+| Swagger PetStore (Swagger 2.0) | `https://petstore.swagger.io/v2/swagger.json` |
+| APIs.guru Directory (OpenAPI 3.0) | `https://api.apis.guru/v2/specs/apis.guru/2.2.0/openapi.json` |
 
 Verify the result under **Resources → Imported APIs**, which shows every imported
 endpoint in a table.
