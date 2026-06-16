@@ -1,0 +1,38 @@
+<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="520" fill="#1e1e1e"/>
+  <!-- tab strip -->
+  <rect x="0" y="0" width="900" height="36" fill="#2d2d2d"/>
+  <rect x="0" y="0" width="160" height="36" fill="#1e1e1e"/>
+  <text x="20" y="23" fill="#cccccc" font-size="12">Import API</text>
+  <text x="140" y="24" fill="#858585" font-size="13">&#215;</text>
+
+  <text x="40" y="84" fill="#ffffff" font-size="22" font-weight="300">Import API</text>
+  <text x="40" y="110" fill="#9d9d9d" font-size="13">Postman collections and OpenAPI / Swagger specs are detected automatically.</text>
+
+  <!-- From File card -->
+  <rect x="40" y="140" width="380" height="180" rx="6" fill="#252526" stroke="#3c3c3c"/>
+  <text x="64" y="176" fill="#75beff" font-size="16">&#128462;</text>
+  <text x="88" y="178" fill="#ffffff" font-size="16">Import from File</text>
+  <text x="64" y="206" fill="#9d9d9d" font-size="12">Choose a .json / .yaml collection or spec</text>
+  <rect x="64" y="226" width="240" height="30" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+  <text x="76" y="246" fill="#cccccc" font-size="12">petstore-openapi.json</text>
+  <rect x="64" y="272" width="120" height="32" rx="3" fill="#0e639c"/>
+  <text x="124" y="293" fill="#ffffff" font-size="13" text-anchor="middle">Import File</text>
+
+  <!-- From URL card -->
+  <rect x="460" y="140" width="380" height="180" rx="6" fill="#252526" stroke="#3c3c3c"/>
+  <text x="484" y="176" fill="#75beff" font-size="16">&#127760;</text>
+  <text x="508" y="178" fill="#ffffff" font-size="16">Import from URL</text>
+  <text x="484" y="206" fill="#9d9d9d" font-size="12">Paste a link to a hosted OpenAPI spec</text>
+  <rect x="484" y="226" width="320" height="30" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+  <text x="496" y="246" fill="#cccccc" font-size="12">https://petstore3.swagger.io/api/v3/openapi.json</text>
+  <rect x="484" y="272" width="120" height="32" rx="3" fill="#0e639c"/>
+  <text x="544" y="293" fill="#ffffff" font-size="13" text-anchor="middle">Import URL</text>
+
+  <!-- application prompt -->
+  <rect x="40" y="356" width="800" height="120" rx="6" fill="#202020" stroke="#3c3c3c"/>
+  <text x="64" y="388" fill="#e2c08d" font-size="13">Step 2 — Select an application</text>
+  <text x="64" y="414" fill="#9d9d9d" font-size="12">After choosing a source you'll be asked which application the endpoints belong to.</text>
+  <rect x="64" y="430" width="360" height="28" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+  <text x="76" y="449" fill="#cccccc" font-size="12">PetStore&#9660;</text>
+</svg>

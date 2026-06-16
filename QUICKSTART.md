@@ -6,18 +6,26 @@ inside VS Code.
 
 This guide gets you from install to your first generated test in a few minutes.
 
+> The figures below illustrate the API2Test UI. Your colours will match your active
+> VS Code theme.
+
 ---
 
 ## 1. Install
 
-**From a `.vsix` package**
+**From the bundled package**
+
+This repo ships the extension as [`Api2Test.vsix`](Api2Test.vsix).
 
 ```bash
-code --install-extension api2test-vscode-0.0.19.vsix
+code --install-extension Api2Test.vsix
 ```
 
 Or in VS Code: open the Extensions view (`Ctrl+Shift+X`) → `…` menu →
-**Install from VSIX…** → pick the file.
+**Install from VSIX…** → pick `Api2Test.vsix`.
+
+See [`InstallationGuide.pdf`](InstallationGuide.pdf) for step-by-step install
+instructions with prerequisites.
 
 **For development (from source)**
 
@@ -34,7 +42,9 @@ When the extension activates you'll see the message **"API2Test extension is rea
 ## 2. Open the API2Test panel
 
 Click the **flask icon** (🧪) in the Activity Bar on the left edge of VS Code.
-The **API2Test** tree view opens with four entries:
+The **API2Test** tree view opens with four entries.
+
+![The API2Test panel in VS Code](docs/images/01-panel.svg)
 
 | Entry | What it does |
 |-------|--------------|
@@ -55,9 +65,14 @@ Click **API Import**. The import dialog opens with two options:
   (`.json` / `.yaml`) file.
 - **From URL** — paste a link to a hosted OpenAPI/Swagger spec.
 
+![The Import API dialog](docs/images/02-import.svg)
+
 The format is detected automatically. You'll be prompted to pick (or name) the
 **application** the endpoints belong to, then the endpoints are imported into your
 library.
+
+Try it with the samples in [`Example Swagger Files`](Example%20Swagger%20Files) —
+e.g. the PetStore OpenAPI spec or the Postman collections included there.
 
 Verify the result under **Resources → Imported APIs**, which shows every imported
 endpoint in a table.
@@ -83,6 +98,8 @@ Click **Data Dictionary** to open its table page. Here you define the fields you
 tests use — name, type, whether they're mandatory, and which **data method**
 supplies their value.
 
+![The Data Dictionary table](docs/images/03-data-dictionary.svg)
+
 To bootstrap it quickly, use **Import Data Dictionary from API Endpoints** (the
 download icon on the Data Dictionary section) to derive fields directly from the
 endpoints you imported.
@@ -95,8 +112,11 @@ Click **Test Cases** to open the Test Cases page, then use the toolbar to
 **Generate Test**. You can also right-click an endpoint to **Generate Class** for
 that specific API method.
 
+![The Test Cases page](docs/images/04-test-cases.svg)
+
 The generators combine your imported endpoints, class/method libraries, and data
-dictionary into ready-to-use API test classes.
+dictionary into ready-to-use API test classes. A complete worked output is in
+[`Example Generated Project`](Example%20Generated%20Project).
 
 ---
 
@@ -130,6 +150,19 @@ API Import  →  Resources (review)  →  Data Dictionary  →  Test Cases (gene
 
 ---
 
+## What's in this repo
+
+| Item | Description |
+|------|-------------|
+| [`Api2Test.vsix`](Api2Test.vsix) | The installable VS Code extension |
+| [`InstallationGuide.pdf`](InstallationGuide.pdf) | Install steps and prerequisites |
+| [`QuickStartGuide.pdf`](QuickStartGuide.pdf) | This guide, as a printable PDF |
+| [`Example Swagger Files`](Example%20Swagger%20Files) | Sample specs/collections to import |
+| [`Example Generated Project`](Example%20Generated%20Project) | A worked test project |
+| [`Feedback Questionnaire.pdf`](Feedback%20Questionnaire.pdf) | Tell us how the trial went |
+
+---
+
 ## Troubleshooting
 
 - **Tree is empty after import** — click **Refresh** at the top of the panel.
@@ -137,5 +170,8 @@ API Import  →  Resources (review)  →  Data Dictionary  →  Test Cases (gene
   not an HTML page; API2Test rejects responses that start with `<html>`.
 - **Extension didn't activate** — check **Output → API2Test** (or the Developer
   Console, `Help → Toggle Developer Tools`) for the activation log.
-</content>
-</invoke>
+
+---
+
+When you've finished trying API2Test, we'd love your feedback —
+please fill in [`Feedback Questionnaire.pdf`](Feedback%20Questionnaire.pdf).

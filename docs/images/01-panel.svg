@@ -1,0 +1,66 @@
+<svg width="900" height="560" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="560" fill="#1e1e1e"/>
+  <!-- Title bar -->
+  <rect width="900" height="30" fill="#3c3c3c"/>
+  <circle cx="18" cy="15" r="5" fill="#ff5f56"/>
+  <circle cx="36" cy="15" r="5" fill="#ffbd2e"/>
+  <circle cx="54" cy="15" r="5" fill="#27c93f"/>
+  <text x="450" y="19" fill="#cccccc" font-size="12" text-anchor="middle">API2Test — Visual Studio Code</text>
+
+  <!-- Activity bar -->
+  <rect x="0" y="30" width="50" height="530" fill="#333333"/>
+  <!-- generic icons -->
+  <rect x="14" y="48" width="22" height="22" fill="none" stroke="#858585" stroke-width="2" rx="2"/>
+  <circle cx="25" cy="100" r="11" fill="none" stroke="#858585" stroke-width="2"/>
+  <!-- API2Test flask icon (active) -->
+  <rect x="0" y="135" width="50" height="40" fill="#252526"/>
+  <rect x="0" y="135" width="2" height="40" fill="#0e70c0"/>
+  <g stroke="#ffffff" stroke-width="2" fill="none">
+    <path d="M21 145 v8 l-7 12 a3 3 0 0 0 3 5 h16 a3 3 0 0 0 3 -5 l-7 -12 v-8"/>
+    <line x1="19" y1="145" x2="31" y2="145"/>
+  </g>
+
+  <!-- Side bar panel -->
+  <rect x="50" y="30" width="290" height="530" fill="#252526"/>
+  <text x="66" y="54" fill="#bbbbbb" font-size="11" letter-spacing="1">API2TEST</text>
+  <text x="322" y="54" fill="#bbbbbb" font-size="14" text-anchor="end">⟳</text>
+
+  <!-- Tree items -->
+  <!-- API Import -->
+  <text x="70" y="86" fill="#75beff" font-size="13">&#9729;</text>
+  <text x="92" y="86" fill="#cccccc" font-size="13">API Import</text>
+  <!-- Data Dictionary -->
+  <text x="70" y="114" fill="#75beff" font-size="13">&#128451;</text>
+  <text x="92" y="114" fill="#cccccc" font-size="13">Data Dictionary</text>
+  <!-- Test Cases -->
+  <text x="70" y="142" fill="#a6e22e" font-size="13">&#129514;</text>
+  <text x="92" y="142" fill="#cccccc" font-size="13">Test Cases</text>
+  <!-- Resources (expanded) -->
+  <text x="58" y="170" fill="#cccccc" font-size="11">&#9660;</text>
+  <text x="70" y="170" fill="#e2c08d" font-size="13">&#128193;</text>
+  <text x="92" y="170" fill="#cccccc" font-size="13" font-weight="bold">Resources</text>
+
+  <text x="108" y="198" fill="#75beff" font-size="12">&#9638;</text>
+  <text x="126" y="198" fill="#cccccc" font-size="12">Imported APIs</text>
+  <text x="108" y="222" fill="#c586c0" font-size="12">&#9638;</text>
+  <text x="126" y="222" fill="#cccccc" font-size="12">API Class Library</text>
+  <text x="108" y="246" fill="#dcdcaa" font-size="12">&#9638;</text>
+  <text x="126" y="246" fill="#cccccc" font-size="12">API Method Library</text>
+  <text x="108" y="270" fill="#dcdcaa" font-size="12">&#9638;</text>
+  <text x="126" y="270" fill="#cccccc" font-size="12">Data Library</text>
+
+  <!-- Editor area -->
+  <rect x="340" y="30" width="560" height="530" fill="#1e1e1e"/>
+  <rect x="340" y="30" width="560" height="36" fill="#2d2d2d"/>
+  <rect x="340" y="30" width="150" height="36" fill="#1e1e1e"/>
+  <text x="360" y="53" fill="#cccccc" font-size="12">Welcome</text>
+  <text x="475" y="53" fill="#858585" font-size="13" text-anchor="middle">&#215;</text>
+
+  <text x="620" y="200" fill="#ffffff" font-size="26" text-anchor="middle" font-weight="300">API2Test</text>
+  <text x="620" y="232" fill="#9d9d9d" font-size="14" text-anchor="middle">Import APIs · Build libraries · Generate tests</text>
+
+  <!-- notification toast -->
+  <rect x="650" y="500" width="230" height="40" rx="4" fill="#252526" stroke="#454545"/>
+  <text x="666" y="524" fill="#75beff" font-size="13">&#9432;</text>
+  <text x="686" y="525" fill="#cccccc" font-size="12">API2Test extension is ready</text>
+</svg>

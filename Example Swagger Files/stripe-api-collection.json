@@ -1,0 +1,263 @@
+{
+  "info": {
+    "name": "Stripe API Collection",
+    "description": "Sample Stripe API collection with hardcoded test data",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Customer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer sk_test_1234567890abcdef",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "john.doe@example.com",
+              "type": "text"
+            },
+            {
+              "key": "name",
+              "value": "John Doe",
+              "type": "text"
+            },
+            {
+              "key": "phone",
+              "value": "+1234567890",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Test customer for development",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://api.stripe.com/v1/customers",
+          "protocol": "https",
+          "host": ["api", "stripe", "com"],
+          "path": ["v1", "customers"]
+        }
+      }
+    },
+    {
+      "name": "Create Payment Intent",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer sk_test_1234567890abcdef",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "amount",
+              "value": "2000",
+              "type": "text"
+            },
+            {
+              "key": "currency",
+              "value": "usd",
+              "type": "text"
+            },
+            {
+              "key": "customer",
+              "value": "cus_1234567890abcdef",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "Test payment for development",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://api.stripe.com/v1/payment_intents",
+          "protocol": "https",
+          "host": ["api", "stripe", "com"],
+          "path": ["v1", "payment_intents"]
+        }
+      }
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer sk_test_1234567890abcdef",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Premium Widget",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "High-quality widget for testing",
+              "type": "text"
+            },
+            {
+              "key": "active",
+              "value": "true",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://api.stripe.com/v1/products",
+          "protocol": "https",
+          "host": ["api", "stripe", "com"],
+          "path": ["v1", "products"]
+        }
+      }
+    },
+    {
+      "name": "Create Price",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer sk_test_1234567890abcdef",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "product",
+              "value": "prod_1234567890abcdef",
+              "type": "text"
+            },
+            {
+              "key": "unit_amount",
+              "value": "2500",
+              "type": "text"
+            },
+            {
+              "key": "currency",
+              "value": "usd",
+              "type": "text"
+            },
+            {
+              "key": "recurring[interval]",
+              "value": "month",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://api.stripe.com/v1/prices",
+          "protocol": "https",
+          "host": ["api", "stripe", "com"],
+          "path": ["v1", "prices"]
+        }
+      }
+    },
+    {
+      "name": "Create Subscription",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer sk_test_1234567890abcdef",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "customer",
+              "value": "cus_1234567890abcdef",
+              "type": "text"
+            },
+            {
+              "key": "items[0][price]",
+              "value": "price_1234567890abcdef",
+              "type": "text"
+            },
+            {
+              "key": "trial_period_days",
+              "value": "14",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://api.stripe.com/v1/subscriptions",
+          "protocol": "https",
+          "host": ["api", "stripe", "com"],
+          "path": ["v1", "subscriptions"]
+        }
+      }
+    },
+    {
+      "name": "Get Customer",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer sk_test_1234567890abcdef",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.stripe.com/v1/customers/cus_1234567890abcdef",
+          "protocol": "https",
+          "host": ["api", "stripe", "com"],
+          "path": ["v1", "customers", "cus_1234567890abcdef"]
+        }
+      }
+    }
+  ]
+}

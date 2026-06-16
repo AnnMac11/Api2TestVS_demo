@@ -1,0 +1,39 @@
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="460" fill="#1e1e1e"/>
+  <rect x="0" y="0" width="900" height="36" fill="#2d2d2d"/>
+  <rect x="0" y="0" width="150" height="36" fill="#1e1e1e"/>
+  <text x="20" y="23" fill="#cccccc" font-size="12">Test Cases</text>
+  <text x="130" y="24" fill="#858585" font-size="13">&#215;</text>
+
+  <text x="40" y="78" fill="#ffffff" font-size="22" font-weight="300">Test Cases</text>
+  <rect x="700" y="58" width="160" height="30" rx="3" fill="#0e639c"/>
+  <text x="780" y="78" fill="#ffffff" font-size="12" text-anchor="middle">&#129514;  Generate Test</text>
+
+  <!-- table header -->
+  <rect x="40" y="110" width="820" height="34" fill="#2d2d2d"/>
+  <text x="56" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Test Name</text>
+  <text x="300" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Method</text>
+  <text x="390" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Endpoint</text>
+  <text x="640" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Application</text>
+  <text x="780" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Status</text>
+
+  <g font-size="12" fill="#cccccc">
+    <rect x="40" y="144" width="820" height="34" fill="#1e1e1e"/>
+    <text x="56" y="166">AddPet_ReturnsCreated</text><text x="300" y="166" fill="#a6e22e">POST</text><text x="390" y="166">/pet</text><text x="640" y="166">PetStore</text><text x="780" y="166" fill="#a6e22e">&#10003; ready</text>
+
+    <rect x="40" y="178" width="820" height="34" fill="#242424"/>
+    <text x="56" y="200">GetPetById_ReturnsOk</text><text x="300" y="200" fill="#75beff">GET</text><text x="390" y="200">/pet/{petId}</text><text x="640" y="200">PetStore</text><text x="780" y="200" fill="#a6e22e">&#10003; ready</text>
+
+    <rect x="40" y="212" width="820" height="34" fill="#1e1e1e"/>
+    <text x="56" y="234">UpdatePet_ReturnsOk</text><text x="300" y="234" fill="#dcdcaa">PUT</text><text x="390" y="234">/pet</text><text x="640" y="234">PetStore</text><text x="780" y="234" fill="#a6e22e">&#10003; ready</text>
+
+    <rect x="40" y="246" width="820" height="34" fill="#242424"/>
+    <text x="56" y="268">DeletePet_ReturnsOk</text><text x="300" y="268" fill="#f48771">DELETE</text><text x="390" y="268">/pet/{petId}</text><text x="640" y="268">PetStore</text><text x="780" y="268" fill="#cd950c">draft</text>
+
+    <rect x="40" y="280" width="820" height="34" fill="#1e1e1e"/>
+    <text x="56" y="302">FindByStatus_ReturnsList</text><text x="300" y="302" fill="#75beff">GET</text><text x="390" y="302">/pet/findByStatus</text><text x="640" y="302">PetStore</text><text x="780" y="302" fill="#a6e22e">&#10003; ready</text>
+  </g>
+  <rect x="40" y="110" width="820" height="208" fill="none" stroke="#3c3c3c"/>
+
+  <text x="40" y="350" fill="#9d9d9d" font-size="12">Generated test classes are written to your project and tracked in api-tests.json.</text>
+</svg>

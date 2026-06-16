@@ -1,0 +1,193 @@
+{
+  "info": {
+    "name": "Twitter API Collection",
+    "description": "Sample Twitter API collection with hardcoded test data",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Tweet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer AAAAAAAAAAAAAAAAAAAAAPYXBAAAAAAACLXUNDekMxqa8h%2FqKmcGjqy6snizZ7u1SLgKvxqYsISLvvEWfDqTdDJTzGpzuvs3cJkuZDAJZVTE9bwtsLFkIUZ3",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Hello World! This is a test tweet from our API testing tool. #testing #api #development\"\n}"
+        },
+        "url": {
+          "raw": "https://api.twitter.com/2/tweets",
+          "protocol": "https",
+          "host": ["api", "twitter", "com"],
+          "path": ["2", "tweets"]
+        }
+      }
+    },
+    {
+      "name": "Get User By Username",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer AAAAAAAAAAAAAAAAAAAAAPYXBAAAAAAACLXUNDekMxqa8h%2FqKmcGjqy6snizZ7u1SLgKvxqYsISLvvEWfDqTdDJTzGpzuvs3cJkuZDAJZVTE9bwtsLFkIUZ3",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.twitter.com/2/users/by/username/twitterdev",
+          "protocol": "https",
+          "host": ["api", "twitter", "com"],
+          "path": ["2", "users", "by", "username", "twitterdev"]
+        }
+      }
+    },
+    {
+      "name": "Get User Tweets",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer AAAAAAAAAAAAAAAAAAAAAPYXBAAAAAAACLXUNDekMxqa8h%2FqKmcGjqy6snizZ7u1SLgKvxqYsISLvvEWfDqTdDJTzGpzuvs3cJkuZDAJZVTE9bwtsLFkIUZ3",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.twitter.com/2/users/2244994945/tweets?max_results=10&tweet.fields=created_at,author_id,lang,context_annotations",
+          "protocol": "https",
+          "host": ["api", "twitter", "com"],
+          "path": ["2", "users", "2244994945", "tweets"],
+          "query": [
+            {
+              "key": "max_results",
+              "value": "10"
+            },
+            {
+              "key": "tweet.fields",
+              "value": "created_at,author_id,lang,context_annotations"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Tweets",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer AAAAAAAAAAAAAAAAAAAAAPYXBAAAAAAACLXUNDekMxqa8h%2FqKmcGjqy6snizZ7u1SLgKvxqYsISLvvEWfDqTdDJTzGpzuvs3cJkuZDAJZVTE9bwtsLFkIUZ3",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.twitter.com/2/tweets/search/recent?query=API%20testing&max_results=20&tweet.fields=created_at,author_id,lang",
+          "protocol": "https",
+          "host": ["api", "twitter", "com"],
+          "path": ["2", "tweets", "search", "recent"],
+          "query": [
+            {
+              "key": "query",
+              "value": "API testing"
+            },
+            {
+              "key": "max_results",
+              "value": "20"
+            },
+            {
+              "key": "tweet.fields",
+              "value": "created_at,author_id,lang"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Retweet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer AAAAAAAAAAAAAAAAAAAAAPYXBAAAAAAACLXUNDekMxqa8h%2FqKmcGjqy6snizZ7u1SLgKvxqYsISLvvEWfDqTdDJTzGpzuvs3cJkuZDAJZVTE9bwtsLFkIUZ3",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tweet_id\": \"1234567890123456789\"\n}"
+        },
+        "url": {
+          "raw": "https://api.twitter.com/2/users/2244994945/retweets",
+          "protocol": "https",
+          "host": ["api", "twitter", "com"],
+          "path": ["2", "users", "2244994945", "retweets"]
+        }
+      }
+    },
+    {
+      "name": "Like Tweet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer AAAAAAAAAAAAAAAAAAAAAPYXBAAAAAAACLXUNDekMxqa8h%2FqKmcGjqy6snizZ7u1SLgKvxqYsISLvvEWfDqTdDJTzGpzuvs3cJkuZDAJZVTE9bwtsLFkIUZ3",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tweet_id\": \"1234567890123456789\"\n}"
+        },
+        "url": {
+          "raw": "https://api.twitter.com/2/users/2244994945/likes",
+          "protocol": "https",
+          "host": ["api", "twitter", "com"],
+          "path": ["2", "users", "2244994945", "likes"]
+        }
+      }
+    },
+    {
+      "name": "Get User Followers",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer AAAAAAAAAAAAAAAAAAAAAPYXBAAAAAAACLXUNDekMxqa8h%2FqKmcGjqy6snizZ7u1SLgKvxqYsISLvvEWfDqTdDJTzGpzuvs3cJkuZDAJZVTE9bwtsLFkIUZ3",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.twitter.com/2/users/2244994945/followers?max_results=100&user.fields=created_at,description,location",
+          "protocol": "https",
+          "host": ["api", "twitter", "com"],
+          "path": ["2", "users", "2244994945", "followers"],
+          "query": [
+            {
+              "key": "max_results",
+              "value": "100"
+            },
+            {
+              "key": "user.fields",
+              "value": "created_at,description,location"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

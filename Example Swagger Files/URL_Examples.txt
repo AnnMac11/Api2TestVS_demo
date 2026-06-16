@@ -1,0 +1,29 @@
+MuleSoft RAML APIs
+https://api-portal.anypoint.mulesoft.com/raml/twitter
+
+ https://raw.githubusercontent.com/raml-org/raml-examples/master/jukebox-api/jukebox-api.raml
+ 
+ OpenAPI/Swagger (YAML) 
+  https://petstore.swagger.io/v2/swagger.yaml
+  
+https://stripe.com/docs/api
+
+GraphQL
+ https://swapi-graphql.netlify.app/.netlify/functions/index
+ 
+https://api.spacex.land/graphql/
+
+# Quick Access List:
+
+## OpenAPI/YAML:
+- PetStore: https://petstore.swagger.io/ (↳ Download: https://petstore.swagger.io/v2/swagger.yaml)
+- HTTPBin: https://httpbin.org/ (↳ Spec: https://httpbin.org/spec.json)
+
+## GraphQL:
+- Countries: https://countries.trevorblades.com/ (↳ Schema via introspection)
+- SpaceX: https://api.spacex.land/graphql/ (↳ Schema via introspection)
+- GitHub: https://docs.github.com/en/graphql/overview/explorer (↳ Download schema from docs)
+
+## RAML:
+- Mulesoft Examples: https://anypoint.mulesoft.com/apiplatform/raml-org/
+- RAML Jukebox: https://raml.org/projects/project-details

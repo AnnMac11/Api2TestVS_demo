@@ -1,0 +1,229 @@
+{
+  "info": {
+    "name": "GitHub API Collection",
+    "description": "Sample GitHub API collection with hardcoded test data",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Repository",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token ghp_1234567890abcdef1234567890abcdef12345678",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"test-repo\",\n  \"description\": \"A test repository created via API\",\n  \"private\": false,\n  \"has_issues\": true,\n  \"has_wiki\": true,\n  \"has_downloads\": true\n}"
+        },
+        "url": {
+          "raw": "https://api.github.com/user/repos",
+          "protocol": "https",
+          "host": ["api", "github", "com"],
+          "path": ["user", "repos"]
+        }
+      }
+    },
+    {
+      "name": "Create Issue",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token ghp_1234567890abcdef1234567890abcdef12345678",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Bug Report: API endpoint not working\",\n  \"body\": \"I'm experiencing an issue with the /api/users endpoint. The response is always empty even when there are users in the database.\",\n  \"assignees\": [\"octocat\"],\n  \"labels\": [\"bug\", \"api\"]\n}"
+        },
+        "url": {
+          "raw": "https://api.github.com/repos/octocat/Hello-World/issues",
+          "protocol": "https",
+          "host": ["api", "github", "com"],
+          "path": ["repos", "octocat", "Hello-World", "issues"]
+        }
+      }
+    },
+    {
+      "name": "Create Comment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token ghp_1234567890abcdef1234567890abcdef12345678",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"body\": \"I can reproduce this issue. It seems to be related to the authentication middleware.\"\n}"
+        },
+        "url": {
+          "raw": "https://api.github.com/repos/octocat/Hello-World/issues/1/comments",
+          "protocol": "https",
+          "host": ["api", "github", "com"],
+          "path": ["repos", "octocat", "Hello-World", "issues", "1", "comments"]
+        }
+      }
+    },
+    {
+      "name": "Update Repository",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token ghp_1234567890abcdef1234567890abcdef12345678",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"updated-repo-name\",\n  \"description\": \"Updated description for the repository\",\n  \"has_wiki\": false,\n  \"has_downloads\": false\n}"
+        },
+        "url": {
+          "raw": "https://api.github.com/repos/octocat/Hello-World",
+          "protocol": "https",
+          "host": ["api", "github", "com"],
+          "path": ["repos", "octocat", "Hello-World"]
+        }
+      }
+    },
+    {
+      "name": "Create Gist",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token ghp_1234567890abcdef1234567890abcdef12345678",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"description\": \"Hello World Examples\",\n  \"public\": true,\n  \"files\": {\n    \"hello_world.rb\": {\n      \"content\": \"puts 'Hello, World!'\"\n    },\n    \"hello_world.py\": {\n      \"content\": \"print('Hello, World!')\"\n    },\n    \"hello_world.js\": {\n      \"content\": \"console.log('Hello, World!');\"\n    }\n  }\n}"
+        },
+        "url": {
+          "raw": "https://api.github.com/gists",
+          "protocol": "https",
+          "host": ["api", "github", "com"],
+          "path": ["gists"]
+        }
+      }
+    },
+    {
+      "name": "Create Pull Request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token ghp_1234567890abcdef1234567890abcdef12345678",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Add new API endpoint for user management\",\n  \"body\": \"This PR adds a new endpoint /api/users that allows administrators to manage user accounts. Includes full CRUD operations and proper error handling.\",\n  \"head\": \"feature/user-management-api\",\n  \"base\": \"main\"\n}"
+        },
+        "url": {
+          "raw": "https://api.github.com/repos/octocat/Hello-World/pulls",
+          "protocol": "https",
+          "host": ["api", "github", "com"],
+          "path": ["repos", "octocat", "Hello-World", "pulls"]
+        }
+      }
+    },
+    {
+      "name": "Create Release",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token ghp_1234567890abcdef1234567890abcdef12345678",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tag_name\": \"v1.0.0\",\n  \"target_commitish\": \"main\",\n  \"name\": \"First Release\",\n  \"body\": \"This is the first stable release of our API testing tool. Includes support for importing from Swagger URLs and Postman collections.\",\n  \"draft\": false,\n  \"prerelease\": false\n}"
+        },
+        "url": {
+          "raw": "https://api.github.com/repos/octocat/Hello-World/releases",
+          "protocol": "https",
+          "host": ["api", "github", "com"],
+          "path": ["repos", "octocat", "Hello-World", "releases"]
+        }
+      }
+    },
+    {
+      "name": "Get User",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "token ghp_1234567890abcdef1234567890abcdef12345678",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/vnd.github.v3+json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://api.github.com/users/octocat",
+          "protocol": "https",
+          "host": ["api", "github", "com"],
+          "path": ["users", "octocat"]
+        }
+      }
+    }
+  ]
+}
