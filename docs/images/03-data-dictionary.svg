@@ -6,42 +6,97 @@
   <text x="160" y="24" fill="#858585" font-size="13">&#215;</text>
 
   <text x="40" y="78" fill="#ffffff" font-size="22" font-weight="300">Data Dictionary</text>
-  <rect x="660" y="58" width="90" height="30" rx="3" fill="#0e639c"/>
-  <text x="705" y="78" fill="#ffffff" font-size="12" text-anchor="middle">+ Add Field</text>
-  <rect x="760" y="58" width="100" height="30" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
-  <text x="810" y="78" fill="#cccccc" font-size="12" text-anchor="middle">Import…</text>
+  <rect x="672" y="58" width="88" height="30" rx="3" fill="#0e639c"/>
+  <text x="716" y="78" fill="#ffffff" font-size="12" text-anchor="middle">Add API</text>
+  <rect x="770" y="58" width="90" height="30" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+  <text x="815" y="78" fill="#cccccc" font-size="12" text-anchor="middle">Add Field</text>
 
-  <!-- table header -->
   <rect x="40" y="110" width="820" height="34" fill="#2d2d2d"/>
-  <text x="56" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Field Name</text>
-  <text x="240" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Type</text>
-  <text x="360" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Mandatory</text>
-  <text x="500" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Data Method</text>
-  <text x="740" y="132" fill="#bbbbbb" font-size="12" font-weight="bold">Actions</text>
+  <text x="56" y="132" fill="#bbbbbb" font-size="11" font-weight="bold">Field Name</text>
+  <text x="168" y="132" fill="#bbbbbb" font-size="11" font-weight="bold">Type</text>
+  <text x="246" y="132" fill="#bbbbbb" font-size="11" font-weight="bold">Location</text>
+  <text x="338" y="132" fill="#bbbbbb" font-size="11" font-weight="bold">Mandatory</text>
+  <text x="440" y="132" fill="#bbbbbb" font-size="11" font-weight="bold">Data Method</text>
+  <text x="642" y="132" fill="#bbbbbb" font-size="11" font-weight="bold">Arguments</text>
+  <text x="754" y="132" fill="#bbbbbb" font-size="11" font-weight="bold">Edit</text>
+  <text x="800" y="132" fill="#bbbbbb" font-size="11" font-weight="bold">Delete</text>
 
-  <!-- rows -->
   <g font-size="12" fill="#cccccc">
     <rect x="40" y="144" width="820" height="34" fill="#1e1e1e"/>
-    <text x="56" y="166">petId</text><text x="240" y="166">integer</text><text x="360" y="166" fill="#a6e22e">Yes</text><text x="500" y="166">GenerateRandomId()</text>
-    <text x="740" y="166" fill="#75beff">edit</text><text x="784" y="166" fill="#f48771">delete</text>
+    <text x="56" y="166">petId</text>
+    <text x="168" y="166">integer</text>
+    <rect x="242" y="153" width="38" height="17" rx="8" fill="#37373d"/>
+    <text x="261" y="166" font-size="10" fill="#9cdcfe" text-anchor="middle">path</text>
+    <rect x="338" y="153" width="32" height="17" rx="8" fill="#2d4a2d"/>
+    <text x="354" y="166" font-size="10" fill="#a6e22e" text-anchor="middle">Yes</text>
+    <rect x="436" y="150" width="194" height="22" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+    <text x="444" y="166" font-size="11">RandomId()</text>
+    <text x="618" y="166" font-size="9" fill="#cccccc">&#9660;</text>
+    <rect x="638" y="150" width="100" height="22" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+    <text x="646" y="166" font-size="11" fill="#ce9178">1,100000</text>
+    <text x="754" y="166" fill="#75beff">edit</text>
+    <text x="800" y="166" fill="#f48771">delete</text>
 
     <rect x="40" y="178" width="820" height="34" fill="#242424"/>
-    <text x="56" y="200">name</text><text x="240" y="200">string</text><text x="360" y="200" fill="#a6e22e">Yes</text><text x="500" y="200">RandomName()</text>
-    <text x="740" y="200" fill="#75beff">edit</text><text x="784" y="200" fill="#f48771">delete</text>
+    <text x="56" y="200">name</text>
+    <text x="168" y="200">string</text>
+    <rect x="242" y="187" width="38" height="17" rx="8" fill="#37373d"/>
+    <text x="261" y="200" font-size="10" fill="#9cdcfe" text-anchor="middle">body</text>
+    <rect x="338" y="187" width="32" height="17" rx="8" fill="#2d4a2d"/>
+    <text x="354" y="200" font-size="10" fill="#a6e22e" text-anchor="middle">Yes</text>
+    <rect x="436" y="184" width="194" height="22" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+    <text x="444" y="200" font-size="11">ProductName()</text>
+    <text x="618" y="200" font-size="9" fill="#cccccc">&#9660;</text>
+    <text x="642" y="200" fill="#6b6b6b" font-size="11">&#8212;</text>
+    <text x="754" y="200" fill="#75beff">edit</text>
+    <text x="800" y="200" fill="#f48771">delete</text>
 
     <rect x="40" y="212" width="820" height="34" fill="#1e1e1e"/>
-    <text x="56" y="234">status</text><text x="240" y="234">string</text><text x="360" y="234" fill="#cd950c">No</text><text x="500" y="234">PickFrom("available","sold")</text>
-    <text x="740" y="234" fill="#75beff">edit</text><text x="784" y="234" fill="#f48771">delete</text>
+    <text x="56" y="234">status</text>
+    <text x="168" y="234">string</text>
+    <rect x="242" y="221" width="42" height="17" rx="8" fill="#37373d"/>
+    <text x="263" y="234" font-size="10" fill="#9cdcfe" text-anchor="middle">query</text>
+    <rect x="338" y="221" width="30" height="17" rx="8" fill="#4a3f2d"/>
+    <text x="353" y="234" font-size="10" fill="#cd950c" text-anchor="middle">No</text>
+    <rect x="436" y="218" width="194" height="22" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+    <text x="444" y="234" font-size="11">RandomStr()</text>
+    <text x="618" y="234" font-size="9" fill="#cccccc">&#9660;</text>
+    <rect x="638" y="218" width="100" height="22" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+    <text x="646" y="234" font-size="11" fill="#ce9178">8</text>
+    <text x="754" y="234" fill="#75beff">edit</text>
+    <text x="800" y="234" fill="#f48771">delete</text>
 
     <rect x="40" y="246" width="820" height="34" fill="#242424"/>
-    <text x="56" y="268">category</text><text x="240" y="268">object</text><text x="360" y="268" fill="#cd950c">No</text><text x="500" y="268">DefaultCategory()</text>
-    <text x="740" y="268" fill="#75beff">edit</text><text x="784" y="268" fill="#f48771">delete</text>
+    <text x="56" y="268">category</text>
+    <text x="168" y="268">object</text>
+    <rect x="242" y="255" width="38" height="17" rx="8" fill="#37373d"/>
+    <text x="261" y="268" font-size="10" fill="#9cdcfe" text-anchor="middle">body</text>
+    <rect x="338" y="255" width="30" height="17" rx="8" fill="#4a3f2d"/>
+    <text x="353" y="268" font-size="10" fill="#cd950c" text-anchor="middle">No</text>
+    <rect x="436" y="252" width="194" height="22" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+    <text x="444" y="268" font-size="11">Not Assigned</text>
+    <text x="618" y="268" font-size="9" fill="#cccccc">&#9660;</text>
+    <text x="642" y="268" fill="#6b6b6b" font-size="11">&#8212;</text>
+    <text x="754" y="268" fill="#75beff">edit</text>
+    <text x="800" y="268" fill="#f48771">delete</text>
 
     <rect x="40" y="280" width="820" height="34" fill="#1e1e1e"/>
-    <text x="56" y="302">quantity</text><text x="240" y="302">integer</text><text x="360" y="302" fill="#a6e22e">Yes</text><text x="500" y="302">RandomInt(1,100)</text>
-    <text x="740" y="302" fill="#75beff">edit</text><text x="784" y="302" fill="#f48771">delete</text>
+    <text x="56" y="302">quantity</text>
+    <text x="168" y="302">integer</text>
+    <rect x="242" y="289" width="38" height="17" rx="8" fill="#37373d"/>
+    <text x="261" y="302" font-size="10" fill="#9cdcfe" text-anchor="middle">body</text>
+    <rect x="338" y="289" width="32" height="17" rx="8" fill="#2d4a2d"/>
+    <text x="354" y="302" font-size="10" fill="#a6e22e" text-anchor="middle">Yes</text>
+    <rect x="436" y="286" width="194" height="22" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+    <text x="444" y="302" font-size="11">RandomInt()</text>
+    <text x="618" y="302" font-size="9" fill="#cccccc">&#9660;</text>
+    <rect x="638" y="286" width="100" height="22" rx="3" fill="#3c3c3c" stroke="#5a5a5a"/>
+    <text x="646" y="302" font-size="11" fill="#ce9178">1,100</text>
+    <text x="754" y="302" fill="#75beff">edit</text>
+    <text x="800" y="302" fill="#f48771">delete</text>
   </g>
   <rect x="40" y="110" width="820" height="208" fill="none" stroke="#3c3c3c"/>
 
-  <text x="40" y="350" fill="#9d9d9d" font-size="12">5 fields · derived from imported PetStore endpoints</text>
+  <text x="40" y="348" fill="#9d9d9d" font-size="12">5 fields &#183; derived from the imported PetStore endpoints. Location says where a field travels &#8212; path, query or body.</text>
+  <text x="40" y="370" fill="#9d9d9d" font-size="12">The Data Method list is narrowed to the methods that suit each type; Arguments is enabled only for methods that take one.</text>
 </svg>
